@@ -1,0 +1,24 @@
+@startuml
+
+interface Component {
+ +void display();
+ +void add(Component component);
+ +void remove(Component component);
+}
+
+class Composite {
+ +void display();
+ +void add(Component component);
+ +void remove(Component component);
+}
+
+class Leaf {
+ +void display();
+ +void add(Component component);
+ +void remove(Component component);
+}
+
+Component <|.. Composite
+Component <|.. Leaf
+
+@enduml

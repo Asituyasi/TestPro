@@ -1,0 +1,33 @@
+@startuml
+
+interface Colleague {
+
++void notify(String name);
+    
++void receive();
+    
++String getName();
+}
+
+class Mediator {
+-Map<String, Colleague> colleagues;
++static void notify(String name);
++static void add(Colleague colleague)
+}
+
+class ColleagueA {
+-String name
++ColleagueA(String name)
+}
+
+class ColleagueB {
+-String name
++ColleagueA(String name)
+}
+
+Colleague<|..ColleagueA
+Colleague<|..ColleagueB
+Colleague o-- Mediator
+
+@enduml
+http://www.plantuml.com/plantuml/png/bP3DJeKm48NtynIpX22y03S6SOqRds3I3gH9Vqmxa1Ylxougjf9u5tRLd7FcEvCPab2KrLa0uuNZJ8hnCLZBjAoCRm3D5en67yJChzMpHECNzEIuxW7tT_YH5PkDgwmUoONbYToN_WwWBAM44sj34k9ERoTwkNn7xqhjFQgVR-gXIK9Y5DxUuvGWhQjCAg2wz6VtuNE3NoXeYdMg-6Ds_CzijYxNhYkv6_fOT0njc-y5CB3NgxCV

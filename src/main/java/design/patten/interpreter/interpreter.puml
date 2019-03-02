@@ -1,0 +1,32 @@
+@startuml
+
+abstract class Expression {
++interpret(Map<String, Object> map)
+}
+
+abstract class SymbolExpression {
+ -Expression left;
+ -Expression right;
+}
+
+class AddExpression {
++interpret(Map<String, Object> map)
+}
+
+class SubExpression {
++interpret(Map<String, Object> map)
+}
+
+class VarExpression {
+-String key
++interpret(Map<String, Object> map)
+}
+
+Expression <|-- SymbolExpression
+Expression <|-- VarExpression
+SymbolExpression <|-- AddExpression
+SymbolExpression <|-- SubExpression
+
+@enduml
+
+http://www.plantuml.com/plantuml/png/dP2n2i8m54NtVCKR5SqNj4WT7CMXuFxInXfDql3o2XRrtqNQeQ48qZ7Xt7EJMqH6uivP8L159gmOAeinmk4HICTeMWzFiJ6UDGNIl3fYo4icuvijdDHDLxm3Xs4jtZD5sJlLsaG4SdAq-i9PUaMckNBsTGsAVLqlUSZOtwdbuJDI4fO33dVT_okQvFENbBCzPa3IAKOyPP95VZ3fnuKejAyxPpy0

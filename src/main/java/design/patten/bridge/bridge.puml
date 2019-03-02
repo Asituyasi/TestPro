@@ -1,0 +1,31 @@
+@startuml
+
+abstract class Abstraction {
+-Implementor -mplementor
++action()
+}
+
+interface Implementor {
++actionImpl()
+}
+
+class ConcreteImplementorA{
++actionImpl()
+}
+
+class ConcreteImplementorB{
++actionImpl()
+}
+
+class RefinedAbstraction{
++action()
+}
+
+Implementor <|.. ConcreteImplementorA
+Implementor <|.. ConcreteImplementorB
+Abstraction <|-- RefinedAbstraction
+Abstraction o--> Implementor
+
+@enduml
+
+http://www.plantuml.com/plantuml/png/bT31oi8m30VmUvwYHqMo9n3PvichRz2low3Gfj9cf-cxgrGnWmb-jpRyuFzFsY8sonG3WFqhagqJuu8jnNIlhqziPi1Jl0IAn9AomSyRTfLijd03y2oKH-l8Q3w_qNDOOOqu9dQPX1Jk_eFxh_XCesSQr0xpigdkjxyspMgNdrGFAkMX45VI5mRneEy3q18FKmnt

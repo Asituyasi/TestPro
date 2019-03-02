@@ -1,0 +1,41 @@
+@startuml
+       interface Visitor{
+       + void visit(Element e)
+       }
+       
+       interface Element{
+       + accept(Visitor visitor)
+       }
+       
+       class ElementA{
+       + accept(Visitor visitor)
+       }
+       
+       class ElementB{
+       + accept(Visitor visitor)
+       }
+       
+       class VisitorA{
+       + visitor(ElementA elementA)
+       }
+       
+       class VisitorB{
+       + visitor(ElementB elementB)
+       }
+       
+       class ObjectStruct {
+       - List<Element> elements
+       + add(Element e)
+       + show(Visitor visitor)
+       }
+       
+       ObjectStruct --> Element
+       ObjectStruct --> Visitor
+       
+       Element <|.. ElementA
+       Element <|.. ElementB
+       
+       Visitor <|.. VisitorA 
+       Visitor <|.. VisitorB
+@enduml
+       

@@ -1,0 +1,28 @@
+@startuml
+interface FlyWeight {
+    +void option();
+    +String getIntrinsicState();
+}
+
+class ConcreteFlyWeightA{
+-String intrinsicState;
+    +void option();
+    +String getIntrinsicState();
+}
+class ConcreteFlyWeightB{
+-String intrinsicState;
+    +void option();
+    +String getIntrinsicState();
+}
+
+class FlyWeightFactory {
+-Map flyWeightMap
++ FlyWeight creatFlyWeight(String str)
++ static FlyWeightFactory getInstance()
+- static void addFlyWeigth(FlyWeight flyWeight)
+}
+
+FlyWeight <|.. ConcreteFlyWeightA
+FlyWeight <|.. ConcreteFlyWeightB
+FlyWeightFactory o--> FlyWeight
+@enduml

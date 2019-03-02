@@ -1,0 +1,21 @@
+@startuml
+
+interface Target {
++action()
+}
+
+class TargetImpl {
++ action()
+}
+
+class TargetProxy {
+- Target target
++ TargetProxy(Target target)
++ action()
+}
+
+Target <|.. TargetImpl
+TargetProxy --> Target
+
+
+@enduml

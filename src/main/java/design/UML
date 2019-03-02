@@ -1,0 +1,26 @@
+@startuml
+       class Originator{
+       - stat
+       + Memento creatMemento()
+       + void setStatFromMemento(Memento memento)
+       }
+       
+       class Memento{
+       - stat
+       +void setStat(String stat)
+       +String getStat()
+       }
+       
+       class CareTaker{
+       -List<Memento>
+       
+       +addMemento()
+       +getMemento(int i)
+       }
+       
+       Originator ..> Memento : 依赖
+       CareTaker o-- Memento : 聚合（contains many）
+       
+@enduml
+       
+http://www.plantuml.com/plantuml/png/JP2nIWD148RxUOefBuIx1n090S5AiOWlCDmkns1s5cP7GSJ2BdPM5eAFONVuD0hfxXLSubworVBpyN_iF-jaf7OVjj1lAIMyKHvOoA8-GOiP6YpnsWSl5h5NJrP2iyZW8RB3v6rZP9SQmypcGlX_5_0CnL_8ILuhceqfot0WML_IK61bkI3rjtJdDNkkEDbvqQu0bkHSzSLSdXEB8Hyafv7OTQlZl3Fy-VxSVxt3KO-nRIkyV_duVTjDuwwFOiIIC90yJkChmDgBorVy0m00

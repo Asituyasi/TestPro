@@ -1,0 +1,21 @@
+@startuml
+
+interface Target{
++function1()
++function2()
+}
+
+class Adaptee {
++function1()
+}
+
+class Adapter {
++function1()
++function2()
+}
+
+Target <|..Adapter
+Adaptee <|--Adapter
+
+@enduml
+http://www.plantuml.com/plantuml/png/SoWkIImgAStDuUBAp2j9BKfBJ4vL24aiIayjgURIJYlDIox9pCyprD14S8o0d5ekhkISnE9Y1SUKn8AIr5G5PCMOyaKA10o3sAXWKwEd1zN11JKPAAQh2nFZSaZDIm4w5W00

@@ -1,0 +1,29 @@
+@startuml
+Abstract class AbstractTemplateMethod {
++ templateMethod()
++ abstractMethod()
++ implementedMethod()
++ hookMethod()
+}
+
+class ConcreteTempleteMethod1 {
++ abstractMethod()
++ hookMethod()
+}
+
+class ConcreteTempleteMethod2 {
++ abstractMethod()
++ hookMethod()
+}
+
+class ConcreteTempleteMethod3 {
++ abstractMethod()
++ hookMethod()
+}
+
+AbstractTemplateMethod <|-- ConcreteTempleteMethod1
+AbstractTemplateMethod <|-- ConcreteTempleteMethod2
+AbstractTemplateMethod <|-- ConcreteTempleteMethod3
+@enduml
+
+http://www.plantuml.com/plantuml/png/SoWkIImgAStDuN9CAYufIamkKKZEIImkLe1nGr9p2t8IIr9zKqioybCKghcq5KfGX3GqWKA9KDL8Gfb0HQcvgNabgIb8eXdv-TbmRYqN5yGov_oyvABKabImPQamamqLgf6C9jCG8seOOaoi8JX2pQP6LnUN9ydGOqI67cCkXzIy56140m00

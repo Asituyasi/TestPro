@@ -1,0 +1,30 @@
+@startuml
+
+interface State
+class ConcreteStateA
+class ConcreteStateB
+class Context
+
+interface State {
++ doAction()
+}
+
+class ConcreteStateA {
++ doAction()
+}
+
+class ConcreteStateB {
++ doAction()
+}
+
+class Context {
+- State
++ void setState(State state)
++ State getState()
+}
+
+Context -o State
+State<|.. ConcreteStateA
+State<|.. ConcreteStateB
+
+@enduml

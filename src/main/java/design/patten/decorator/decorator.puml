@@ -1,0 +1,37 @@
+@startuml
+
+interface Component{
++doSomething()
+}
+
+class ConcreteComponentA {
++doSomething()
+}
+
+class ConcreteComponentB {
++doSomething()
+}
+
+abstract class Decorator {
+}
+
+class ConcteteDecoratorA {
+-Component component
++ doSomething()
+}
+
+class ConcteteDecoratorB {
+-Component component
++ doSomething()
+}
+
+
+Component <|.. ConcreteComponentA
+Component <|.. ConcreteComponentB
+Component <|.. Decorator
+Decorator <|-- ConcteteDecoratorA
+Decorator <|-- ConcteteDecoratorB
+Component --> ConcteteDecoratorA
+Component --> ConcteteDecoratorB
+@enduml
+http://www.plantuml.com/plantuml/png/bP9D2i8m48NtSueibPAUGAH6R-09ndJKGfkHP5nLxsv4Z3yCbEu6tfSlBs6Q91ZbElG0NH2AH_HajZnSE52G4QgMzpoGdBjmMYpX3k1xJ2aZmKSIAkZ6p82T2kCXIKGlvdLgHvuZ2aSp_geagqhulDSMiV7l2IgZjb4KReO2FjpgLjVAFqmIxfyeHQ1CER1MUUmayIstTgqf9W073OKsRyG3
