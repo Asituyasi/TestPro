@@ -33,6 +33,6 @@ public class MemorizedCutRod {
     }
 
     public static void main(String[] args) {
-        System.out.println(memorizedCutRod(prices, 1));
+        System.out.println(memorizedCutRod(prices, 4));
     }
 }
