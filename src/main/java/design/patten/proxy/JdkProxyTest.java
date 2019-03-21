@@ -19,6 +19,7 @@ public class JdkProxyTest {
         Class<? extends Target> proxyClass = proxy.getClass();
         System.out.println(proxyClass.getName());
         String proxyClassName = proxyClass.getName();
+        
         byte[] classBytes = ProxyGenerator.generateProxyClass(proxyClassName, targetInterfaceClass);
         String filePath = "/Users/enn/" + proxyClassName + ".class";
         System.out.println(filePath);
